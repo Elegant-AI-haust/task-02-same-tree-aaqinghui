@@ -1,0 +1,29 @@
+// 计算机科学与技术，计科231-刘亚辉-231404060113，微信：xh2631hh
+#include <stdio.h>
+#include <string.h>
+void input(char w[])
+{
+	int i = 0;
+	char m = getchar();
+	while (m != '\n')
+	{
+		w[i] = m;
+		m = getchar();
+		i++;
+	}
+}
+
+void judge(char p[],char q[])
+{
+	if (!strcmp(p, q))
+		printf("true");
+	else
+		printf("false");
+}
+int main()
+{
+	char p[10] = { 0 }, q[10] = { 0 };
+	input(p);
+	input(q);
+	judge(p, q);
+}
